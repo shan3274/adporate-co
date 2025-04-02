@@ -6,26 +6,26 @@
 
 ## 📁 Project Structure
 📦 adporate-co
-│── 📂 public # Static assets (images, logos, etc.)
-│── 📂 components # Reusable UI Components
-│ ├── Header.js # Navbar & navigation
-│ ├── Footer.js # Footer with social links
-│ ├── Hero.js # Hero section (Landing Page)
-│ ├── Portfolio.js # Portfolio showcase
-│ ├── BlogPreview.js # Blog section preview
-│ ├── Testimonials.js # Client testimonials
-│ ├── Workflow.js # Step-by-step process section
-│ ├── FAQ.js # FAQ with accordion
-│── 📂 pages # Route-based pages
-│ ├── index.js # Homepage
-│ ├── services.js # Services page
-│ ├── portfolio.js # Full portfolio listing
-│ ├── blog.js # Blog listing page
-│ ├── contact.js # Contact page
-│── 📂 styles # Global styling
-│── 📜 tailwind.config.js # Tailwind CSS Config
-│── 📜 package.json # Project dependencies
-│── 📜 README.md # Project Documentation
+│── 📂 public → Static assets (images, logos, etc.)
+│── 📂 components → Reusable UI Components
+│ ├── 🟢 Header.js → Navbar & navigation
+│ ├── 🟢 Footer.js → Footer with social links
+│ ├── 🟢 Hero.js → Hero section (Landing Page)
+│ ├── 🟢 Portfolio.js → Portfolio showcase
+│ ├── 🟢 BlogPreview.js → Blog section preview
+│ ├── 🟢 Testimonials.js → Client testimonials
+│ ├── 🟢 Workflow.js → Step-by-step process section
+│ ├── 🟢 FAQ.js → FAQ with accordion
+│── 📂 pages → Route-based pages
+│ ├── 🔹 index.js → Homepage
+│ ├── 🔹 services.js → Services page
+│ ├── 🔹 portfolio.js → Full portfolio listing
+│ ├── 🔹 blog.js → Blog listing page
+│ ├── 🔹 contact.js → Contact page
+│── 📂 styles → Global styling
+│── 📜 tailwind.config.js → Tailwind CSS Config
+│── 📜 package.json → Project dependencies
+│── 📜 README.md → Project Documentation
 
 
 ---
