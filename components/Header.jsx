@@ -18,7 +18,14 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md px-6 py-4 z-50 border-b border-gray-200">
+    <nav
+      className="fixed top-0 left-0 w-full px-6 py-4 border-b border-gray-200 z-[60] transition-all duration-300"
+      style={{
+        background: isOpen ? "#1A1A1A" : "rgba(255, 255, 255, 0.9)",
+        backdropFilter: isOpen ? "none" : "blur(10px)",
+        WebkitBackdropFilter: isOpen ? "none" : "blur(10px)",
+      }}
+    >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* 🔹 Logo */}
         <Link href="/" className="text-xl font-bold text-[#1A1A1A]">
@@ -57,6 +64,8 @@ const Header = () => {
       </div>
 
       {/* 🔹 Mobile Navbar */}
+      {/* 🔹 Mobile Navbar */}
+      {/* 🔹 Mobile Navbar */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -64,12 +73,12 @@ const Header = () => {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="fixed top-0 right-0 w-full h-full bg-[#1A1A1A] text-white z-50 flex flex-col items-center justify-center "
+            className="fixed top-0 left-0 w-full h-screen bg-black z-[9999] flex flex-col items-center justify-center px-6"
           >
             {/* ❌ Close Button */}
             <button
               onClick={() => setIsOpen(false)}
-              className="absolute top-5 right-5 text-white"
+              className="absolute top-6 right-6 text-white"
             >
               <X size={30} />
             </button>
@@ -91,7 +100,7 @@ const Header = () => {
             {/* 📍 CTA Button */}
             <Link
               href="/contact"
-              className="mt-8 px-6 py-3 text-white bg-[#0057FF] rounded-full hover:bg-[#0040CC] transition-all"
+              className="mt-10 px-6 py-3 text-white bg-[#0057FF] rounded-full hover:bg-[#0040CC] transition-all"
             >
               Let’s Talk
             </Link>
