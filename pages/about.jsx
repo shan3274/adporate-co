@@ -3,15 +3,15 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import ServicesSection from "@/components/ServicesSection";
 
 const About = () => {
   return (
-    <div className="bg-white text-black">
+    <div className="bg-[#F8FAFC] text-black">
       <Header />
 
       {/* Hero Section */}
-      <section className="min-h-screen flex flex-col md:flex-row items-center justify-between px-8 md:px-20 py-20 bg-white gap-10">
+      <section className="min-h-screen flex flex-col md:flex-row items-center justify-between px-8 md:px-20 py-20 bg-[#F8FAFC] gap-10">
         {/* Left Side: Text */}
         <motion.div
           className="md:w-1/2 text-center md:text-left"
@@ -49,7 +49,7 @@ const About = () => {
       </section>
 
       {/* Mission Section */}
-      <section className="py-20 px-6 bg-gray-100 text-center">
+      <section className="py-20 px-6 bg-[#F8FAFC] text-center">
         <motion.h2
           className="text-4xl font-bold mb-6"
           initial={{ opacity: 0, y: 20 }}
@@ -71,40 +71,10 @@ const About = () => {
       </section>
 
       {/* What We Do Section */}
-      <section className="py-20 px-6">
-        <h2 className="text-4xl font-bold text-center mb-12">What We Do</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
-          {[
-            {
-              title: "Website Development",
-              desc: "Custom websites tailored to your business needs.",
-            },
-            {
-              title: "Mobile App Development",
-              desc: "Robust apps for Android and iOS platforms.",
-            },
-            {
-              title: "Social Media Management",
-              desc: "Grow your brand and engage with the right audience.",
-            },
-          ].map((service, index) => (
-            <motion.div
-              key={index}
-              className="bg-black text-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition"
-              whileHover={{ scale: 1.05 }}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-            >
-              <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-              <p className="text-gray-300">{service.desc}</p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
+      <ServicesSection />
 
       {/* Our Story */}
-      <section className="py-20 px-6 bg-gray-100 text-center">
+      <section className="py-20 px-6 bg-[#F8FAFC]  text-center">
         <h2 className="text-4xl font-bold mb-6">Our Journey</h2>
         <p className="max-w-4xl mx-auto text-gray-700 leading-relaxed text-lg">
           Founded by passionate tech experts, Adporate began with a vision to

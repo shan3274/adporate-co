@@ -9,6 +9,7 @@ import {
   FaHeadset,
   FaLightbulb,
 } from "react-icons/fa";
+import ServicesSection from "@/components/ServicesSection";
 
 const Services = () => {
   return (
@@ -51,46 +52,7 @@ const Services = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="grid grid-cols-1 md:grid-cols-3 gap-10 px-6 md:px-20 py-16 bg-[#F0F4F8]">
-        {/* Website Dev */}
-        <motion.div
-          className="bg-white shadow-xl p-8 rounded-2xl border border-gray-200 hover:shadow-2xl transition-all"
-          whileHover={{ scale: 1.05 }}
-        >
-          <FaGlobe className="text-4xl text-blue-500 mb-4" />
-          <h3 className="text-xl font-bold mb-2">Website Development</h3>
-          <p className="text-gray-600">
-            Fully responsive websites that reflect your brand and provide
-            seamless user experiences.
-          </p>
-        </motion.div>
-
-        {/* App Dev */}
-        <motion.div
-          className="bg-white shadow-xl p-8 rounded-2xl border border-gray-200 hover:shadow-2xl transition-all"
-          whileHover={{ scale: 1.05 }}
-        >
-          <FaMobileAlt className="text-4xl text-green-500 mb-4" />
-          <h3 className="text-xl font-bold mb-2">App Development</h3>
-          <p className="text-gray-600">
-            Scalable Android & iOS apps crafted with modern technologies for
-            performance and impact.
-          </p>
-        </motion.div>
-
-        {/* Social Media */}
-        <motion.div
-          className="bg-white shadow-xl p-8 rounded-2xl border border-gray-200 hover:shadow-2xl transition-all"
-          whileHover={{ scale: 1.05 }}
-        >
-          <FaBullhorn className="text-4xl text-red-500 mb-4" />
-          <h3 className="text-xl font-bold mb-2">Social Media Management</h3>
-          <p className="text-gray-600">
-            Boost your digital presence with creative campaigns, daily
-            management & real engagement.
-          </p>
-        </motion.div>
-      </section>
+      <ServicesSection bg={"#F0F4F8"} />
 
       {/* Why Choose Us Section */}
       <section className="px-6 md:px-20 py-20 bg-[#F0F4F8] text-center">

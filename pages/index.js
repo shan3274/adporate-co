@@ -12,10 +12,10 @@ import React from "react";
 
 const index = () => {
   return (
-    <div>
+    <div className="bg-[#F0F4F8]">
       <Header />
       <HeroSection />
-      <ServicesSection />
+      <ServicesSection bg={"#F5F7FA"} />
       <WhyChooseUs />
       <Portfolio />
       <BlogPreview />

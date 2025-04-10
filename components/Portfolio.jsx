@@ -58,7 +58,7 @@ const Portfolio = () => {
               <h3 className="text-2xl font-bold text-black">{project.title}</h3>
               <p className="text-gray-600 mt-2">{project.desc}</p>
 
-              <Link href={`/portfolio/${project.id}`}>
+              <Link href={`/projects/${project.id}`}>
                 <button className="mt-4 px-5 py-2 text-sm bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition">
                   Learn More
                 </button>
