@@ -1,10 +1,91 @@
 import { motion } from "framer-motion";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
 
 const HeroSection = () => {
+  const particlesInit = async (engine) => {
+    // Load tsparticles package
+    console.log(engine);
+    await loadFull(engine);
+  };
   return (
     <section className="relative w-full h-screen flex flex-col items-center justify-center bg-[#F5F7FA] text-[#1A1A1A] px-6 sm:pt-0
-    pt-50">
-      <div className="max-w-4xl text-center">
+    pt-50 overflow-hidden">
+      {/* 🔹 Background Particles */}
+      <Particles
+        id="tsparticles"
+        init={particlesInit}
+        options={{
+          fullScreen: false,
+          background: {
+            color: {
+              value: "transparent",
+            },
+          },
+          particles: {
+            number: {
+              value: 50,
+              density: {
+                enable: true,
+                value_area: 800,
+              },
+            },
+            color: {
+              value: "#A855F7", // Purple color
+            },
+            shape: {
+              type: "circle",
+            },
+            opacity: {
+              value: 1.2,
+              random: false,
+              anim: {
+                enable: false,
+              },
+            },
+            size: {
+              value: 8,
+              random: true,
+              anim: {
+                enable: false,
+              },
+            },
+            move: {
+              enable: true,
+              speed: 1,
+              direction: "none",
+              random: false,
+              straight: false,
+              outModes: {
+                default: "out",
+              },
+            },
+          },
+          interactivity: {
+            events: {
+              onHover: {
+                enable: true,
+                mode: "repulse",
+              },
+              onClick: {
+                enable: true,
+                mode: "push",
+              },
+            },
+            modes: {
+              repulse: {
+                distance: 100,
+                duration: 0.4,
+              },
+              push: {
+                quantity: 4,
+              },
+            },
+          },
+        }}
+        className="absolute inset-0 z-0"
+      />
+      <div className="max-w-4xl text-center relative z-10">
         {/* 🔹 Main Heading */}
         <motion.h1
           className="text-6xl font-bold leading-tight text-[#0D0D0D]"
