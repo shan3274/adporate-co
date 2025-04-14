@@ -44,7 +44,7 @@ const services = [
 const ServicesSection = ({ bg }) => {
   return (
     <section
-      className={`w-full py-16  text-[#1A1A1A] text-center sm:pt-0 pt-30`}
+      className={`w-full py-16 mt-32 text-[#1A1A1A] text-center sm:pt-0 pt-30`}
       style={{ background: bg }}
     >
       <motion.h2

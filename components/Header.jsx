@@ -39,7 +39,7 @@ const Header = () => {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm text-[#333333] font-medium hover:text-[#0057FF] transition-all"
+              className="text-sm text-[#333333] font-medium hover:text-[#63469c] transition-all"
             >
               {item.name}
             </Link>
@@ -50,7 +50,7 @@ const Header = () => {
         <div className="hidden md:flex">
           <Link
             href="/contact"
-            className="px-5 py-2 text-sm text-white bg-[#0057FF] rounded-full hover:bg-[#0040CC] transition-all"
+            className="px-5 py-2 text-sm text-white bg-[#63469c] rounded-full hover:bg-[#0040CC] transition-all"
           >
             Let’s Talk
           </Link>
