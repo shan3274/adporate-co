@@ -61,7 +61,7 @@ const Employees = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Our <span className="text-[#0057FF]">Team</span> Drives Success
+            Our <span className="text-[#63469c]">Team</span> Drives Success
           </motion.h1>
 
           <motion.p
@@ -84,12 +84,12 @@ const Employees = () => {
               to="team"
               smooth={true}
               duration={800}
-              className="px-6 py-3 text-lg font-medium text-white bg-[#0057FF] rounded-full hover:bg-[#0040CC] transition-all shadow-lg cursor-pointer"
+              className="px-6 py-3 text-lg font-medium text-white bg-[#63469c] rounded-full hover:bg-purple-700 transition-all shadow-lg cursor-pointer"
             >
               View Team
             </ScrollLink>
 
-            <Link href="/careers" className="px-6 py-3 text-lg font-medium text-[#0057FF] border border-[#0057FF] rounded-full hover:bg-[#0057FF] hover:text-white transition-all shadow-lg">
+            <Link href="/careers" className="px-6 py-3 text-lg font-medium text-[#63469c] border border-[#63469c] rounded-full hover:bg-purple-700 hover:text-white transition-all shadow-lg">
               Join Us
             </Link>
           </motion.div>

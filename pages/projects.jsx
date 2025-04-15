@@ -46,7 +46,7 @@ const Project = () => {
         <div className="w-full md:w-1/2 text-center md:text-left">
           <h1 className="text-4xl md:text-5xl font-bold leading-tight">
             We Build Digital Products <br />
-            <span className="text-[#0057FF]">That Solve Real Problems</span>
+            <span className="text-[#63469c]">That Solve Real Problems</span>
           </h1>
           <p className="mt-4 text-gray-600 text-base md:text-lg leading-relaxed">
             From idea to deployment — we’ve delivered 25+ projects including
@@ -87,7 +87,7 @@ const Project = () => {
               <p className="text-gray-600 mt-2">{project.desc}</p>
 
               <Link href={`/projects/${project.slug}`}>
-                <button className="mt-4 px-5 py-2 text-sm bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition">
+                <button className="mt-4 px-5 py-2 text-sm bg-[#63469c] text-white font-semibold rounded-lg hover:bg-purple-700 transition">
                   Learn More
                 </button>
               </Link>
@@ -107,10 +107,10 @@ const Project = () => {
         <div className="flex flex-col md:flex-row justify-center gap-6">
           <div className="bg-white shadow-md rounded-xl px-6 py-8 w-full md:w-1/3">
             <div className="flex justify-center mb-4">
-              <Globe size={36} className="text-[#0057FF]" />
+              <Globe size={36} className="text-[#63469c]" />
             </div>
             <h3 className="text-xl font-semibold mb-2">Website Development</h3>
-            <p className="text-[#0057FF] text-2xl font-bold">₹15,000 - ₹40,000</p>
+            <p className="text-[#63469c] text-2xl font-bold">₹15,000 - ₹40,000</p>
             <p className="mt-2 text-sm text-gray-600">
               Static, Dynamic, or E-commerce websites
             </p>
@@ -118,10 +118,10 @@ const Project = () => {
 
           <div className="bg-white shadow-md rounded-xl px-6 py-8 w-full md:w-1/3">
             <div className="flex justify-center mb-4">
-              <Smartphone size={36} className="text-[#0057FF]" />
+              <Smartphone size={36} className="text-[#63469c]" />
             </div>
             <h3 className="text-xl font-semibold mb-2">App Development</h3>
-            <p className="text-[#0057FF] text-2xl font-bold">₹30,000 - ₹1,00,000</p>
+            <p className="text-[#63469c] text-2xl font-bold">₹30,000 - ₹1,00,000</p>
             <p className="mt-2 text-sm text-gray-600">
               Android / iOS apps — hybrid or native
             </p>
@@ -132,10 +132,10 @@ const Project = () => {
             className="bg-white shadow-md rounded-xl px-6 py-8 w-full md:w-1/3"
           >
             <div className="flex justify-center mb-4">
-              <Settings size={36} className="text-[#0057FF]" />
+              <Settings size={36} className="text-[#63469c]" />
             </div>
             <h3 className="text-xl font-semibold mb-2">Custom Solutions</h3>
-            <p className="text-[#0057FF] text-2xl font-bold">Let's Discuss</p>
+            <p className="text-[#63469c] text-2xl font-bold">Let's Discuss</p>
             <p className="mt-2 text-sm text-gray-600">
               Tailored plans for startups or enterprises
             </p>
