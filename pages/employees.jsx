@@ -4,7 +4,6 @@ import Footer from "@/components/Footer";
 import { FaLaptopCode, FaChartLine, FaBullhorn } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
-
 const employees = [
   {
     id: 1,
