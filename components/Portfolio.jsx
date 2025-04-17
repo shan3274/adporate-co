@@ -59,7 +59,7 @@ const Portfolio = () => {
               <p className="text-gray-600 mt-2">{project.desc}</p>
 
               <Link href={`/projects/${project.id}`}>
-                <button className="mt-4 px-5 py-2 text-sm bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition">
+                <button className="mt-4 px-5 py-2 text-sm bg-purple-600 text-white font-semibold rounded-lg hover:bg-[#63469c] transition">
                   Learn More
                 </button>
               </Link>

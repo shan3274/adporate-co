@@ -49,7 +49,7 @@ const BlogPreview = () => {
             className="group bg-white rounded-lg shadow-md overflow-hidden p-6 max-w-sm flex flex-col text-center hover:shadow-xl transition-all duration-300"
           >
             {/* Circular Image */}
-            <div className="w-28 h-28 mx-auto rounded-full overflow-hidden border-4 border-blue-500">
+            <div className="w-28 h-28 mx-auto rounded-full overflow-hidden border-4 border-purple-500">
               <img
                 src={blog.img}
                 alt={blog.title}
@@ -67,7 +67,7 @@ const BlogPreview = () => {
             {/* Button Always at Bottom */}
             <div className="mt-auto">
               <Link href={`/blog/${blog.id}`}>
-                <button className="mt-4 px-5 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition">
+                <button className="mt-4 px-5 py-2 bg-purple-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition">
                   Read More
                 </button>
               </Link>

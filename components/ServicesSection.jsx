@@ -69,21 +69,21 @@ const ServicesSection = ({ bg }) => {
         {services.map((service, index) => (
           <motion.div
             key={index}
-            className="p-6 bg-white shadow-lg border border-gray-200 rounded-2xl hover:shadow-2xl transition-all transform hover:-translate-y-2"
-            style={{
-              background: "linear-gradient(to bottom, #FFFFFF, #F9FAFB)",
-              boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.08)",
-            }}
+            className="p-6 bg-white shadow-lg border border-gray-200 rounded-2xl hover:bg-[#63469c] hover:text-white hover:shadow-2xl transition-all transform hover:-translate-y-2"
+            // style={{
+            //   background: "linear-gradient(to bottom, #FFFFFF, #F9FAFB)",
+            //   boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.08)",
+            // }}
             whileHover={{ scale: 1.05 }}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: index * 0.2 }}
           >
             <div className="flex justify-center mb-4">{service.icon}</div>
-            <h3 className="text-xl font-semibold text-gray-900">
+            <h3 className="text-xl font-semibold text-black-900">
               {service.title}
             </h3>
-            <p className="text-gray-600 mt-2">{service.description}</p>
+            <p className="text-black-600 mt-2">{service.description}</p>
           </motion.div>
         ))}
       </div>

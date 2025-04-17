@@ -1,6 +1,8 @@
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import { motion } from "framer-motion";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const Careers = () => {
   const particlesInit = async (engine) => {
@@ -8,6 +10,7 @@ const Careers = () => {
   };
 
   return (
+    <div> <Header/>
     <div className="relative w-full min-h-screen bg-[#000000] text-white overflow-hidden">
       {/* 🔹 Particles Background */}
       <Particles
@@ -173,6 +176,8 @@ const Careers = () => {
           </form>
         </motion.div>
       </div>
+    </div>
+    <Footer/>
     </div>
   );
 };

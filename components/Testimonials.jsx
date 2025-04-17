@@ -57,14 +57,14 @@ const Testimonials = () => {
             <img
               src={testimonial.image}
               alt={testimonial.name}
-              className="w-20 h-20 rounded-full object-cover border-4 border-blue-500 shadow-md"
+              className="w-20 h-20 rounded-full object-cover border-4 border-purple-500 shadow-md"
             />
 
             {/* Review Text */}
             <p className="text-lg text-gray-700 mt-4 italic">"{testimonial.review}"</p>
 
             {/* Client Name & Company */}
-            <p className="mt-4 font-bold text-lg text-blue-600">{testimonial.name}</p>
+            <p className="mt-4 font-bold text-lg text-purple-600">{testimonial.name}</p>
             <p className="text-sm text-gray-500">{testimonial.company}</p>
           </motion.div>
         ))}
