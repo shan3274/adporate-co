@@ -140,12 +140,12 @@ const Services = () => {
       {/* Why Choose Us Section */}
       <section className="px-6 md:px-20 py-20 bg-[#F0F4F8] text-center">
         <motion.h2
-          className="text-4xl font-bold mb-10"
+          className="text-4xl text-[#000000] font-bold mb-10"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          Why Choose <span className="text-blue-600">Adporate</span>?
+          Why Choose <span className="text-[#63469c]">Adporate</span>?
         </motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
           {/* Point 1 */}

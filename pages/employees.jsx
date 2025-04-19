@@ -148,6 +148,7 @@ const Employees = () => {
   }}
   className="absolute inset-0 z-0"
 />
+<div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white/50 to-transparent z-10"></div>
         <div className="max-w-5xl text-center">
           <motion.h1
             className="text-5xl sm:text-6xl font-bold leading-tight text-[#ffffff]"
