@@ -2,6 +2,8 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
 
 const blogs = [
   {
@@ -55,19 +57,98 @@ const blogs = [
 ];
 
 const BlogPage = () => {
+  const particlesInit = async (engine) => {
+    await loadFull(engine);
+  };
   return (
-    <main className="bg-[#F9FAFB] text-gray-800">
+    <main className="bg-[#000000] text-gray-800">
       <Header />
-
+      <Particles
+  id="tsparticles"
+  init={particlesInit}
+  options={{
+    fullScreen: false,
+    background: {
+      color: {
+        value: "transparent",
+      },
+    },
+    particles: {
+      number: {
+        value: 50,
+        density: {
+          enable: true,
+          value_area: 800,
+        },
+      },
+      color: {
+        value: "#9A6FD1", // Brighter purple for particles
+      },
+      shape: {
+        type: "circle",
+      },
+      opacity: {
+        value: 0.8, // Increased opacity for particles
+        random: false,
+      },
+      size: {
+        value: 3,
+        random: true,
+      },
+      links: {
+        enable: true,
+        distance: 150,
+        color: "#9A6FD1", // Brighter purple for connecting lines
+        opacity: 1, // Increased opacity for lines
+        width: 1.5, // Slightly thicker lines
+      },
+      move: {
+        enable: true,
+        speed: 1.5,
+        direction: "none",
+        random: false,
+        straight: false,
+        outModes: {
+          default: "out",
+        },
+      },
+    },
+    interactivity: {
+      events: {
+        onHover: {
+          enable: true,
+          mode: "grab",
+        },
+        onClick: {
+          enable: true,
+          mode: "push",
+        },
+      },
+      modes: {
+        grab: {
+          distance: 140,
+          links: {
+            opacity: 1, // Ensure high opacity when grabbing
+          },
+        },
+        push: {
+          quantity: 3,
+        },
+      },
+    },
+    detectRetina: true,
+  }}
+  className="absolute inset-0 z-0"
+/>
       {/* Hero */}
       <section className="pt-32 pb-16 px-6 max-w-7xl mx-auto">
         <motion.h2
-          className="text-5xl font-extrabold text-center tracking-wide"
+          className="text-5xl text-white font-extrabold text-center tracking-wide"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Our Blogs
+          Our <span className="text-[#63469c]">Blogs</span>
         </motion.h2>
 
         {/* Blog Cards */}
@@ -95,7 +176,7 @@ const BlogPage = () => {
                 <p className="text-gray-600 mt-2">{blog.desc}</p>
 
                 <Link href={`/blog/${blog.id}`}>
-                  <button className="mt-4 px-5 py-2 text-sm bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition">
+                  <button className="mt-4 px-5 py-2 text-sm bg-purple-600 text-white font-semibold rounded-lg hover:bg-[#63469c] transition">
                     Read More
                   </button>
                 </Link>

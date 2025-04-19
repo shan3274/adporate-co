@@ -58,7 +58,7 @@ const Workflow = () => {
             transition={{ duration: 0.8, delay: index * 0.2 }}
           >
             {/* Step Icon */}
-            <div className="text-4xl text-blue-600 p-4 bg-white rounded-full shadow-md">
+            <div className="text-4xl text-purple-600 p-4 bg-white rounded-full shadow-md">
               {step.icon}
             </div>
 
@@ -70,7 +70,7 @@ const Workflow = () => {
 
             {/* Connector Line (Always Visible) */}
             <div
-              className={`absolute hidden md:block h-16 w-1 bg-blue-600 top-full left-1/2 transform -translate-x-1/2 ${
+              className={`absolute hidden md:block h-16 w-1 bg-purple-600 top-full left-1/2 transform -translate-x-1/2 ${
                 index === workflowSteps.length - 1 ? "opacity-100" : ""
               }`}
             ></div>

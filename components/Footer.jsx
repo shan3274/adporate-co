@@ -25,7 +25,7 @@ const Footer = () => {
         >
           <h3 className="text-xl font-semibold text-gray-900">Quick Links</h3>
           <ul className="mt-3 space-y-2">
-            {["Home", "Services", "Portfolio", "Blog", "Contact"].map((link, index) => (
+            {["Home", "Services", "Portfolio", "Blog", "Contact","Careers"].map((link, index) => (
               <li key={index}>
                 <a href={`/${link.toLowerCase()}`} className="text-gray-600 hover:text-gray-900 transition">
                   {link}
@@ -63,8 +63,11 @@ const Footer = () => {
         >
           <h3 className="text-xl font-semibold text-gray-900">Follow Us</h3>
           <div className="flex space-x-4 mt-3">
-            {[FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram].map((Icon, index) => (
-              <a key={index} href="#" className="text-gray-600 hover:text-gray-900 transition text-xl">
+            {[{ Icon: FaFacebookF, link: "https://facebook.com/yourpage" },
+            { Icon: FaTwitter, link: "https://twitter.com/yourprofile" },
+            { Icon: FaLinkedinIn, link: "https://www.linkedin.com/in/adporate-commercials-90a679299/" },
+            { Icon: FaInstagram, link: "https://www.instagram.com/adporate.co/" },].map(({ Icon, link }, index) => (
+              <a key={index} href={link} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition text-xl">
                 <Icon />
               </a>
             ))}
@@ -75,7 +78,7 @@ const Footer = () => {
       {/* Copyright & Scroll to Top */}
       <div className="mt-10 border-t border-gray-300 pt-6 text-center text-gray-500 text-sm relative">
         <p>© {new Date().getFullYear()} Adporate.co - All Rights Reserved.</p>
-        
+
         {/* Scroll to Top Button */}
         <a
           href="#"

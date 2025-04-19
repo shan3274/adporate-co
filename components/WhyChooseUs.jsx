@@ -34,7 +34,7 @@ const WhyChooseUs = () => {
   return (
     <section className="py-16 px-6 text-center bg-[#F8FAFC] text-black">
       <motion.h2
-        className="text-4xl font-bold mb-4 text-[#1e3a8a]"
+        className="text-4xl font-bold mb-4 text-[#63469c]"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -63,7 +63,7 @@ const WhyChooseUs = () => {
             key={index}
             className="w-[280px] h-[120px] flex flex-col items-center justify-center gap-3 px-6 py-4 rounded-xl shadow-md transition-all transform hover:-translate-y-1 hover:shadow-lg"
             style={{
-              backgroundColor: index % 2 === 0 ? "#1e3a8a" : "#f97316", // Blue & Orange Colors from Figma
+              backgroundColor: index % 2 === 0 ? "#63469c" : "#000000", // Blue & Orange Colors from Figma
               color: "#fff",
             }}
             whileHover={{ scale: 1.05 }}

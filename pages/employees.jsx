@@ -4,7 +4,8 @@ import Footer from "@/components/Footer";
 import { FaLaptopCode, FaChartLine, FaBullhorn } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
-
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
 const employees = [
   {
     id: 1,
@@ -49,24 +50,117 @@ const employees = [
 ];
 
 const Employees = () => {
+  const particlesInit = async (engine) => {
+    await loadFull(engine);
+  };
   return (
     <div className="bg-gray-50 min-h-screen">
       <Header />
 
       {/* 🌟 Full-Screen Hero Section */}
-      <section className="relative w-full h-screen flex flex-col items-center justify-center bg-[#F5F7FA] text-[#1A1A1A] px-6">
+      <section className="relative w-full h-screen flex flex-col items-center justify-center bg-[#000000] text-[#1A1A1A] px-6">
+      <Particles
+  id="tsparticles"
+  init={particlesInit}
+  options={{
+    fullScreen: false,
+    background: {
+      color: {
+        value: "transparent",
+      },
+    },
+    particles: {
+      number: {
+        value: 30,
+        density: {
+          enable: true,
+          value_area: 900,
+        },
+      },
+      color: {
+        value: "#8B6BC3",
+      },
+      shape: {
+        type: "circle",
+      },
+      opacity: {
+        value: 1,
+        random: true,
+        anim: {
+          enable: true,
+          speed: 0.6,
+          opacity_min: 0.7,
+          sync: false,
+        },
+      },
+      size: {
+        value: 4,
+        random: true,
+        anim: {
+          enable: true,
+          speed: 1,
+          size_min: 1,
+          sync: false,
+        },
+      },
+      links: {
+        enable: true,
+        distance: 150,
+        color: "#8B6BC3",
+        opacity: 0.8,
+        width: 2,
+      },
+      move: {
+        enable: true,
+        speed: 1.5,
+        direction: "none",
+        random: true,
+        straight: false,
+        outModes: {
+          default: "bounce",
+        },
+      },
+    },
+    interactivity: {
+      events: {
+        onHover: {
+          enable: true,
+          mode: "grab",
+        },
+        onClick: {
+          enable: true,
+          mode: "push",
+        },
+      },
+      modes: {
+        grab: {
+          distance: 140,
+          links: {
+            opacity: 1,
+          },
+        },
+        push: {
+          quantity: 3,
+        },
+      },
+    },
+    detectRetina: true,
+  }}
+  className="absolute inset-0 z-0"
+/>
+<div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white/50 to-transparent z-10"></div>
         <div className="max-w-5xl text-center">
           <motion.h1
-            className="text-5xl sm:text-6xl font-bold leading-tight text-[#0D0D0D]"
+            className="text-5xl sm:text-6xl font-bold leading-tight text-[#ffffff]"
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Our <span className="text-[#0057FF]">Team</span> Drives Success
+            Our <span className="text-[#63469c]">Team</span> Drives Success
           </motion.h1>
 
           <motion.p
-            className="mt-4 text-lg text-[#4A4A4A] max-w-2xl mx-auto leading-relaxed"
+            className="mt-4 text-lg text-[#ffffff] max-w-2xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
@@ -85,12 +179,12 @@ const Employees = () => {
               to="team"
               smooth={true}
               duration={800}
-              className="px-6 py-3 text-lg font-medium text-white bg-[#0057FF] rounded-full hover:bg-[#0040CC] transition-all shadow-lg cursor-pointer"
+              className="px-6 py-3 text-lg font-medium text-white bg-[#63469c] rounded-full hover:bg-purple-700 transition-all shadow-lg cursor-pointer"
             >
               View Team
             </ScrollLink>
 
-            <Link href="/careers" className="px-6 py-3 text-lg font-medium text-[#0057FF] border border-[#0057FF] rounded-full hover:bg-[#0057FF] hover:text-white transition-all shadow-lg">
+            <Link href="/careers" className="px-6 py-3 text-lg font-medium text-[#63469c] border border-[#63469c] rounded-full hover:bg-purple-700 hover:text-white transition-all shadow-lg">
               Join Us
             </Link>
           </motion.div>

@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
 
 const projects = [
   {
@@ -24,6 +26,9 @@ const projects = [
 ];
 
 const Portfolio = () => {
+  const particlesInit = async (engine) => {
+    await loadFull(engine);
+  };
   return (
     <section className="py-16 px-6 bg-[#F8FAFC] text-black">
       <motion.h2
@@ -59,7 +64,7 @@ const Portfolio = () => {
               <p className="text-gray-600 mt-2">{project.desc}</p>
 
               <Link href={`/projects/${project.id}`}>
-                <button className="mt-4 px-5 py-2 text-sm bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition">
+                <button className="mt-4 px-5 py-2 text-sm bg-purple-600 text-white font-semibold rounded-lg hover:bg-[#63469c] transition">
                   Learn More
                 </button>
               </Link>
@@ -67,6 +72,95 @@ const Portfolio = () => {
           </motion.div>
         ))}
       </motion.div>
+       <Particles
+              id="tsparticles"
+              init={particlesInit}
+              options={{
+                fullScreen: false,
+                background: {
+                  color: {
+                    value: "transparent",
+                  },
+                },
+                particles: {
+                  number: {
+                    value: 30,
+                    density: {
+                      enable: true,
+                      value_area: 900,
+                    },
+                  },
+                  color: {
+                    value: "#8B6BC3",
+                  },
+                  shape: {
+                    type: "circle",
+                  },
+                  opacity: {
+                    value: 1,
+                    random: true,
+                    anim: {
+                      enable: true,
+                      speed: 0.6,
+                      opacity_min: 0.7,
+                      sync: false,
+                    },
+                  },
+                  size: {
+                    value: 4,
+                    random: true,
+                    anim: {
+                      enable: true,
+                      speed: 1,
+                      size_min: 1,
+                      sync: false,
+                    },
+                  },
+                  links: {
+                    enable: true,
+                    distance: 150,
+                    color: "#8B6BC3",
+                    opacity: 0.8,
+                    width: 2,
+                  },
+                  move: {
+                    enable: true,
+                    speed: 1.5,
+                    direction: "none",
+                    random: true,
+                    straight: false,
+                    outModes: {
+                      default: "bounce",
+                    },
+                  },
+                },
+                interactivity: {
+                  events: {
+                    onHover: {
+                      enable: true,
+                      mode: "grab",
+                    },
+                    onClick: {
+                      enable: true,
+                      mode: "push",
+                    },
+                  },
+                  modes: {
+                    grab: {
+                      distance: 140,
+                      links: {
+                        opacity: 1
+                      }
+                    },
+                    push: {
+                      quantity: 3,
+                    },
+                  },
+                },
+                detectRetina: true,
+              }}
+              className="absolute inset-0 z-0"
+            />
     </section>
   );
 };
