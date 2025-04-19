@@ -148,14 +148,24 @@ const Contact = () => {
             method="POST"
             className="bg-[#1A1A1A] p-8 rounded-xl shadow-md backdrop-blur-sm border border-[#A855F7]/20"
           >
-            <div className="mb-4">
-              <label className="block text-sm font-medium mb-1 text-gray-300">Name</label>
+            <div className="mb-4 flex gap-4">
+              <div className="w-1/2">
+              <label className="block text-sm font-medium mb-1 text-gray-300">First Name</label>
               <input
                 type="text"
-                name="name"
+                name="first_name"
+                required
+                className="w-full p-3 rounded-lg bg-[#2A2A2A] border border-[#A855F7]/20 text-white focus:outline-none focus:ring-2 focus:ring-[#A855F7]" />
+                </div>
+              <div className="w-1/2">
+              <label className="block text-sm font-medium mb-1 text-gray-300">Last Name</label>
+              <input
+                type="text"
+                name="last_name"
                 required
                 className="w-full p-3 rounded-lg bg-[#2A2A2A] border border-[#A855F7]/20 text-white focus:outline-none focus:ring-2 focus:ring-[#A855F7]"
               />
+            </div>
             </div>
             <div className="mb-4">
               <label className="block text-sm font-medium mb-1 text-gray-300">Email</label>
@@ -167,11 +177,20 @@ const Contact = () => {
               />
             </div>
             <div className="mb-4">
+              <label className="block text-sm font-medium mb-1 text-gray-300">Phone Number</label>
+              <input
+                type="phone"
+                name="phone_number"
+                required
+                className="w-full p-3 rounded-lg bg-[#2A2A2A] border border-[#A855F7]/20 text-white focus:outline-none focus:ring-2 focus:ring-[#A855F7]"
+              />
+            </div>
+            <div className="mb-4">
               <label className="block text-sm font-medium mb-1 text-gray-300">Message</label>
               <textarea
                 name="message"
                 required
-                rows="5"
+                rows="3"
                 className="w-full p-3 rounded-lg bg-[#2A2A2A] border border-[#A855F7]/20 text-white focus:outline-none focus:ring-2 focus:ring-[#A855F7]"
               ></textarea>
             </div>
