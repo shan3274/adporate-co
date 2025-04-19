@@ -3,6 +3,8 @@ import Footer from "../components/Footer";
 import Link from "next/link";
 import { Globe, Smartphone, Settings } from "lucide-react";
 import { motion } from "framer-motion";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
 
 const projects = [
   {
@@ -29,31 +31,112 @@ const projects = [
 ];
 
 const Project = () => {
+  const particlesInit = async (engine) => {
+    await loadFull(engine);
+  };
   return (
     <div className="bg-[#F5F7FA] text-[#1A1A1A]">
       <Header />
+      <Particles
+              id="tsparticles"
+              init={particlesInit}
+              options={{
+                fullScreen: false,
+                background: {
+                  color: {
+                    value: "transparent",
+                  },
+                },
+                particles: {
+                  number: {
+                    value: 50,
+                    density: {
+                      enable: true,
+                      value_area: 800,
+                    },
+                  },
+                  color: {
+                    value: "#63469c",
+                  },
+                  shape: {
+                    type: "circle",
+                  },
+                  opacity: {
+                    value: 0.8,
+                    random: false,
+                  },
+                  size: {
+                    value: 3,
+                    random: true,
+                  },
+                  links: {
+                    enable: true,
+                    distance: 150,
+                    color: "#9A6FD1",
+                    opacity: 0.5,
+                    width: 1,
+                  },
+                  move: {
+                    enable: true,
+                    speed: 1.5,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    outModes: {
+                      default: "out",
+                    },
+                  },
+                },
+                interactivity: {
+                  events: {
+                    onHover: {
+                      enable: true,
+                      mode: "grab",
+                    },
+                    onClick: {
+                      enable: true,
+                      mode: "push",
+                    },
+                  },
+                  modes: {
+                    grab: {
+                      distance: 140,
+                      links: {
+                        opacity: 1,
+                      },
+                    },
+                    push: {
+                      quantity: 3,
+                    },
+                  },
+                },
+                detectRetina: true,
+              }}
+              className="absolute inset-0 z-0"
+            />
+            <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white/50 to-transparent z-10"></div>
 
       {/* 🔹 Hero Section */}
-      <section className="h-[100vh] flex flex-col md:flex-row items-center justify-center px-6 md:px-20 bg-[#F5F7FA] text-[#1A1A1A] gap-10">
+      <section className="h-[100vh] flex flex-col md:flex-row items-center justify-center px-6 md:px-20 bg-[#000000] text-[#1A1A1A] gap-10">
         <div className="w-full md:w-1/2 flex justify-center">
           <img
             src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
             alt="Our Projects"
-            className="w-full max-w-md rounded-xl shadow-lg"
+            className="w-full max-w-md rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105 "
           />
         </div>
 
-        <div className="w-full md:w-1/2 text-center md:text-left">
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+        <div className="w-full md:w-1/2 text-center md:text-left relative z-20">
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight text-white">
             We Build Digital Products <br />
             <span className="text-[#63469c]">That Solve Real Problems</span>
           </h1>
-          <p className="mt-4 text-gray-600 text-base md:text-lg leading-relaxed">
+          <p className="mt-4 text-gray-600 text-base md:text-lg leading-relaxed text-white">
             From idea to deployment — we’ve delivered 25+ projects including
             websites, mobile apps, and full-stack platforms. We ensure timely
             delivery with pixel-perfect design and solid backend architecture.
           </p>
-          <ul className="mt-6 text-gray-700 space-y-2 text-sm md:text-base">
+          <ul className="mt-6 text-white space-y-2 text-sm md:text-base">
             <li>🚀 Delivered 95% projects in under 3 weeks</li>
             <li>👨‍💼 Worked with 15+ startups & enterprise clients</li>
             <li>💻 Specialize in MERN, Next.js, Java, and Native Apps</li>
@@ -78,7 +161,7 @@ const Project = () => {
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-full object-cover"
               />
             </div>
 

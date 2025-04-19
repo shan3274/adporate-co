@@ -112,7 +112,7 @@ const Services = () => {
         </motion.h1>
 
         <motion.p
-          className="text-xl md:text-2xl text-gray-600 max-w-3xl mb-6"
+          className="text-xl md:text-2xl text-white-600 max-w-3xl mb-6"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -123,7 +123,7 @@ const Services = () => {
         </motion.p>
 
         <motion.p
-          className="text-base md:text-lg text-gray-500 max-w-2xl"
+          className="text-base md:text-lg text-white-500 max-w-2xl"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
